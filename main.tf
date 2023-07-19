@@ -9,7 +9,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = { }
+  region = "ap-south-1"
 }
 
 resource "aws_vpc" "My_vpc" {
