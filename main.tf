@@ -165,7 +165,5 @@ resource "aws_instance" "pri_instance" {
   associate_public_ip_address     = "false"
   vpc_security_group_ids          = [aws_security_group.Private_sg.id]
   subnet_id                       = aws_subnet.Pri_subnet.id 
-    tags = {
-    Name = " "
   }
 }
