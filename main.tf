@@ -20,7 +20,6 @@ resource "aws_vpc" "My_vpc" {
     Name = "main_vpc"
   }
  }
-}
 
 resource "aws_subnet" "Pub_subnet" {
   vpc_id     = aws_vpc.My_vpc.id
