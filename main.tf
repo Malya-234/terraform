@@ -9,6 +9,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
+  region = { }
 }
 
 resource "aws_vpc" "My_vpc" {
@@ -152,17 +153,31 @@ resource "aws_security_group" "Private_sg" {
 # EC2 public instance
 
 resource "aws_instance" "pub_instance" {
+  ami                             = { }
+  instance_type                   = { }
+  availability_zone               = { }
   associate_public_ip_address     = "true"
   vpc_security_group_ids          = [aws_security_group.Pubsg.id]
   subnet_id                       = aws_subnet.Pub_subnet.id 
+  key_name                        = { }
+  
+    tags = {
+    Name = { }
   }
 }
 
 # Private instance
 
 resource "aws_instance" "pri_instance" {
+  ami                             = { }
+  instance_type                   = { }
+  availability_zone               = { }
   associate_public_ip_address     = "false"
   vpc_security_group_ids          = [aws_security_group.Private_sg.id]
   subnet_id                       = aws_subnet.Pri_subnet.id 
+  key_name                        = { }
+  
+    tags = {
+    Name = { }
   }
 }
