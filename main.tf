@@ -17,7 +17,7 @@ resource "aws_vpc" "My_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "main-vpc"
+    Name = "main_vpc"
   }
  }
 }
