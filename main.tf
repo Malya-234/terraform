@@ -166,4 +166,3 @@ resource "aws_instance" "pri_instance" {
   subnet_id                       = aws_subnet.Pri_subnet.id 
   }
 }
-
