@@ -19,6 +19,7 @@ resource "aws_vpc" "My_vpc" {
   tags = {
     Name = "main-vpc"
   }
+ }
 }
 
 resource "aws_subnet" "Pub_subnet" {
